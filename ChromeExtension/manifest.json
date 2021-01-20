@@ -1,1 +1,12 @@
-
+{
+    "manifest_version": 2,
+    "name": "Meow",
+    "version": "1.0",
+    "description": "The sound a cat makes.",
+    "icons": {"128": "magik.png"},
+    "browser_action": {
+        "default_icon": "magik.png",
+        "default_title": "Cheese Cat",
+        "default_popup": "popup.html"
+    }
+}
