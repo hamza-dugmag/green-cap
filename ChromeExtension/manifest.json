@@ -3,10 +3,10 @@
     "name": "Meow",
     "version": "1.0",
     "description": "The sound a cat makes.",
-    "icons": {"128": "magik.png"},
+    "icons": {"128": "icon.png"},
     "browser_action": {
-        "default_icon": "magik.png",
+        "default_icon": "icon.png",
         "default_title": "Cheese Cat",
-        "default_popup": "popup.html"
+        "default_popup": "index.html"
     }
 }
