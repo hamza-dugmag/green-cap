@@ -9,13 +9,24 @@ var prods = ['LK iPhone 11 Case', "Spigen Ultra Hybrid Case", "OtterBox Commuter
 
 
 
+function randint(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 // Update the relevant fields with the new data.
 const setDOMInfo = info => {
-    document.getElementById('name').innerText = info.msg;  // info.msg
-    document.getElementById("rating").src = images[Math.floor(Math.random() * 4)];
-
+    document.getElementById('name').innerText = info.msg.substring(0, 35) + "...";  // info.msg
+    
+    if (info.msg.substring(0, 5) == "Otter" || info.msg.substring(0, 5) == "Spige" || info.msg.substring(0, 5) == "LK iP") { ///////////////////////////////
+      document.getElementById("rating").src = images[randint(3, 4)]; //////////////////////////////////////////////////////////////////////////////////////
+    } else {
+    document.getElementById("rating").src = images[randint(0, 2)];  ///////////////////////////////////////////////////////////////
     randLink = Math.floor(Math.random() * 3);
     document.getElementById("alt").innerHTML = "<a href=" + hrefs[randLink] + " target='_blank'>" + prods[randLink] + "</a>"
+    }
+    
   };
   
   // Once the DOM is ready...

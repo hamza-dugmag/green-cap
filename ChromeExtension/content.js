@@ -3,22 +3,6 @@ console.log("cash money");
 var p = document.getElementById("productTitle");
 console.log(p.innerText);
 
-// let params = {
-//     active: true,
-//     currentWindow: true
-// }
-// chrome.tabs.query(params, gotTab);
-
-// function gotTab(tab) {
-//     console.log("HELLOOO")
-//     console.log(tabs);
-//     let message = p.innerText;
-//     let msg = {
-//         txt: "hello"
-//     }
-//     chrome.tabs.sendMessage(tabs[0].id, msg);
-// }
-
 
 // Inform the background page that 
 // this tab should have a page-action.
