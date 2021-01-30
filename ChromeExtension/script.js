@@ -4,7 +4,6 @@ var hrefs = [
     'https://www.amazon.ca/LK-Tempered-Protector-Shock-Absorption-Protection/dp/B07X2WV87Z/ref=sr_1_5?crid=2S9OOHKE5XUL9&dchild=1&keywords=iphone+case+11&qid=1611729768&sprefix=iphone+case+%2Caps%2C165&sr=8-5',
     'https://www.amazon.ca/Spigen-Ultra-Hybrid-Works-iPhone/dp/B07T2NBLX9/ref=sr_1_6?crid=2S9OOHKE5XUL9&dchild=1&keywords=iphone+case+11&qid=1611729768&sprefix=iphone+case+%2Caps%2C165&sr=8-6',
     'https://www.amazon.ca/OtterBox-Commuter-Case-iPhone-11/dp/B07W45LYY8/ref=sr_1_3?crid=2S9OOHKE5XUL9&dchild=1&keywords=iphone+case+11&qid=1611729837&sprefix=iphone+case+%2Caps%2C165&sr=8-3'
-
 ];
 var prods = ['LK iPhone 11 Case', "Spigen Ultra Hybrid Case", "OtterBox Commuter Case"]
 
