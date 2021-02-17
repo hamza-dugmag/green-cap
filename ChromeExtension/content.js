@@ -30,6 +30,7 @@ chrome.runtime.onMessage.addListener((msg, sender, response) => {
         var domInfo = {
             productTitle: document.getElementById("productTitle").innerText,  // guaranteed to work
             productPrice: price,
+            productCategories: document.getElementById("wayfinding-breadcrumbs_feature_div").innerHTML
         };
     
         // Directly respond to the sender (popup) through the specified callback.

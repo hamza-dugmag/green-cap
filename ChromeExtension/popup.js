@@ -19,6 +19,7 @@ function randint(min, max) {
 const setDOMInfo = info => {
     document.getElementById('name').innerText = info.productTitle.substring(0, 35) + "...";  // product title
     console.log(info.productPrice);
+    console.log(info.productCategories);
     
     if (info.productTitle.substring(0, 5) == "Otter" || info.productTitle.substring(0, 5) == "Spige" || info.productTitle.substring(0, 5) == "LK iP") {
       document.getElementById("rating").src = ratings[randint(3, 4)];  // high rating if one of the good ones
@@ -47,3 +48,5 @@ window.addEventListener('DOMContentLoaded', () => {
              setDOMInfo);
     });
 });
+
+// wayfinding-breadcrumbs_feature_div
