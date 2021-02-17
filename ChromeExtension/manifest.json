@@ -10,7 +10,7 @@
         "default_popup": "popup.html"
     },
     "background": {
-        "scripts": ["background.js"]
+        "scripts": ["scripts/background.js"]
     },
     "content_scripts": [
         {
@@ -18,7 +18,7 @@
                 "https://www.amazon.ca/*",
                 "https://www.amazon.com/*"
             ],
-            "js": ["content.js"]
+            "js": ["scripts/content.js"]
         }
     ]
 }
