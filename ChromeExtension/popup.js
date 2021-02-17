@@ -18,6 +18,7 @@ function randint(min, max) {
 // Update the relevant fields with the new data.
 const setDOMInfo = info => {
     document.getElementById('name').innerText = info.productTitle.substring(0, 35) + "...";  // product title
+    console.log(info.productPrice);
     
     if (info.productTitle.substring(0, 5) == "Otter" || info.productTitle.substring(0, 5) == "Spige" || info.productTitle.substring(0, 5) == "LK iP") {
       document.getElementById("rating").src = ratings[randint(3, 4)];  // high rating if one of the good ones

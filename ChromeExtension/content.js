@@ -10,15 +10,28 @@ chrome.runtime.sendMessage({
 // Listen for messages from the popup.
 chrome.runtime.onMessage.addListener((msg, sender, response) => {
 
-    // First, validate the message's structure.
+    // First, validate the message's structure. Then, collect the necessary data.
     if ((msg.from === 'popup') && (msg.subject === 'DOMInfo')) {
 
-        // Collect the necessary data. 
+        // two options for price:
+        var price = "";
+        try {
+            price = document.getElementById("priceblock_ourprice").innerHTML;
+        }
+        catch (err) {
+            try {
+                price = document.getElementById("priceblock_saleprice").innerHTML;
+            }
+            catch (err) {
+                price = "";
+            }
+        }
+
         var domInfo = {
-            productTitle: document.getElementById("productTitle").innerText,
-            // here
+            productTitle: document.getElementById("productTitle").innerText,  // guaranteed to work
+            productPrice: price,
         };
-  
+    
         // Directly respond to the sender (popup) through the specified callback.
         response(domInfo);
     }
