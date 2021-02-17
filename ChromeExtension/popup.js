@@ -48,5 +48,3 @@ window.addEventListener('DOMContentLoaded', () => {
              setDOMInfo);
     });
 });
-
-// wayfinding-breadcrumbs_feature_div

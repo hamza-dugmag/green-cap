@@ -1,6 +1,3 @@
-// elements of interest
-// var title_span = document.getElementById("productTitle");
-
 // Inform the background page that this tab should have a page-action.
 chrome.runtime.sendMessage({
     from: 'content',
