@@ -1,9 +1,6 @@
-var fs = require('fs'); // Filesystem    
-var content = fs.readFileSync("item.html", "utf-8");
+export function price(string) {
+    string = string.replace(/(<([^›>]+)>)/gi, "");
 
-let strippedString = content.replace(/(<([^›>]+)>)/gi, "");
-
-function price(string) {
     var activation = 0;
     var price = "";
     for (letter in string) {
@@ -21,8 +18,10 @@ function price(string) {
 }
 
 
-function items(string) {
+export function items(string) {
+    string = string.replace(/(<([^›>]+)>)/gi, "");
     string = string.replace(/amp;/g, "");
+
     list = [];
     counter = 0;
 
@@ -40,9 +39,10 @@ function items(string) {
     return list;
 }
 
+// export { price, items };
 
-a = (items(strippedString))
+// a = (items(strippedString))
 
-for (item in a) {
-    console.log(a[item]);
-}
+// for (item in a) {
+//     console.log(a[item]);
+// }

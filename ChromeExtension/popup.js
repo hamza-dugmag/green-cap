@@ -1,3 +1,49 @@
+// import * as srt from "./scripts/sorter.js";
+
+
+// ============================================================= from sorter.js
+function get_price(string) {
+    string = string.replace(/(<([^›>]+)>)/gi, "");
+
+    var activation = 0;
+    var price = "";
+    for (letter in string) {
+        if (activation == 1) {
+            price += string[letter]
+        }
+        if ((activation == 1) && (string[letter] == " ")) {
+            break;
+        }
+        if ((string[letter]) == ";") {
+            activation = 1;
+        }
+    }
+    return (Number(price));
+}
+
+
+function get_items(string) {
+    string = string.replace(/(<([^›>]+)>)/gi, "");
+    string = string.replace(/amp;/g, "");
+
+    list = [];
+    counter = 0;
+
+    while (counter < string.length) {
+        if (((string.slice(counter,counter+1)) == " ") && ((string.slice(counter+1, counter+2)) == " ") && ((string.slice(counter+2, counter+3)) != " ")) {
+            ending = string.indexOf("  ", counter+2)
+            newstring = string.slice(counter+2, ending);
+
+            if (newstring.length > 3) {
+                list.push(newstring);
+            }
+        }
+        counter += 1;
+    }
+    return list;
+}
+// =============================================================
+
 // random parameters
 var ratings = ["img/trash.jpg", "img/bad.jpg", "img/meh.jpg", "img/good.jpg", "img/great.jpg"];
 var altLinks = [
@@ -18,8 +64,6 @@ function randint(min, max) {
 // Update the relevant fields with the new data.
 const setDOMInfo = info => {
     document.getElementById('name').innerText = info.productTitle.substring(0, 35) + "...";  // product title
-    console.log(info.productPrice);
-    console.log(info.productCategories);
     
     if (info.productTitle.substring(0, 5) == "Otter" || info.productTitle.substring(0, 5) == "Spige" || info.productTitle.substring(0, 5) == "LK iP") {
       document.getElementById("rating").src = ratings[randint(3, 4)];  // high rating if one of the good ones
@@ -29,6 +73,10 @@ const setDOMInfo = info => {
         randLink = randint(0, 2);  // random alternative
         document.getElementById("alt").innerHTML = "<a href=" + altLinks[randLink] + " target='_blank'>" + alternatives[randLink] + "</a>"
     }
+
+    // http request to GreenCap server
+    var price = get_price(info.productPrice);  // IMPORT SORTER
+    var items = get_items(info.productCategories);  // IMPORT SORTER
 
 };
 
