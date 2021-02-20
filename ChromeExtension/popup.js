@@ -61,6 +61,17 @@ function randint(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+
+// https://stackoverflow.com/questions/247483/http-get-request-in-javascript
+function httpGet(theUrl)
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+}
+
+
 // Update the relevant fields with the new data.
 const setDOMInfo = info => {
     document.getElementById('name').innerText = info.productTitle.substring(0, 35) + "...";  // product title
@@ -77,6 +88,8 @@ const setDOMInfo = info => {
     // http request to GreenCap server
     var price = get_price(info.productPrice);  // IMPORT SORTER
     var items = get_items(info.productCategories);  // IMPORT SORTER
+    var http_link = "https://l90oikv0ue.execute-api.us-east-2.amazonaws.com/test/greencap?category=" + items[items.length - 1] + "&price=" + price.toString();
+    console.log(httpGet(http_link));
 
 };
 
