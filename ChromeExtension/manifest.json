@@ -9,6 +9,9 @@
         "default_title": "GreenCap",
         "default_popup": "popup.html"
     },
+    "permissions": [
+        "https://l90oikv0ue.execute-api.us-east-2.amazonaws.com/*"
+    ],
     "background": {
         "scripts": ["scripts/background.js"]
     },

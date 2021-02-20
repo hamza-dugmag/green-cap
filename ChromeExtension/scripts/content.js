@@ -1,3 +1,5 @@
+// https://stackoverflow.com/questions/20019958/chrome-extension-how-to-send-data-from-content-script-to-popup-html
+
 // Inform the background page that this tab should have a page-action.
 chrome.runtime.sendMessage({
     from: 'content',
