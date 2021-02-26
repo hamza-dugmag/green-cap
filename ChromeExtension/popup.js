@@ -98,8 +98,8 @@ const setDOMInfo = info => {
         document.getElementById("planet").innerText = (Math.round(score[0])).toString() + " kg CO2";
     else
         document.getElementById("planet").innerText = "Unknown...";
-    document.getElementById("people").innerText = score[1];
-    document.getElementById("animals").innerText = score[2];
+    document.getElementById("people").innerText = score[1].toString() + "/5";
+    document.getElementById("animals").innerText = score[2].toString() + "/5";
 
     // convert kg to 1-5 rating
     var normalized_planet = 0;
