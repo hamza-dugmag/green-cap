@@ -90,7 +90,8 @@ const setDOMInfo = info => {
     var items = get_items(info.productCategories);  // IMPORT SORTER
     var http_link = "https://l90oikv0ue.execute-api.us-east-2.amazonaws.com/test/greencap?category=" + items[items.length - 1] + "&price=" + price.toString();
     json_get = JSON.parse(httpGet(http_link));
-    var score = json_get.score;
+    
+    var score = [json_get.planet, json_get.people, json_get.animals, json_get.recommended];
     console.log(score);
 
     // display score
