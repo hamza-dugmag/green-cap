@@ -94,12 +94,35 @@ const setDOMInfo = info => {
     var score = [json_get.planet, json_get.people, json_get.animals, json_get.recommended];
 
     // display score
-    document.getElementById("planet").innerText = (Math.round(score[0])).toString() + " kg CO2";
+    if (score[0] != 0) 
+        document.getElementById("planet").innerText = (Math.round(score[0])).toString() + " kg CO2";
+    else
+        document.getElementById("planet").innerText = "Unknown...";
     document.getElementById("people").innerText = score[1];
     document.getElementById("animals").innerText = score[2];
 
-    var ranking_index = Math.abs(Math.floor((score[1]-1 + score[2]-1)/2));
+    // convert kg to 1-5 rating
+    var normalized_planet = 0;
+    if (score[0] == 0)
+        normalized_planet = 1;
+    else if (score[0] < 10)
+        normalized_planet = 5;
+    else if (score[0] < 25)
+        normalized_planet = 4;
+    else if (score[0] < 50)
+        normalized_planet = 3;
+    else if (score[0] < 100)
+        normalized_planet = 2;
+    else
+        normalized_planet = 1;
+
+    // score the product
+    var ranking_index = Math.abs(Math.floor((score[1]-1 + score[2]-1 + normalized_planet-1)/3));
     document.getElementById("rating").src = ratings[ranking_index];
+
+    // link
+    if (ranking_index < 3)
+        document.getElementById("alt").innerHTML = "<a href=" + score[3] + " target='_blank'>" + "Recommendation" + "</a>";
 
 };
 
