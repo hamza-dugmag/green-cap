@@ -45,7 +45,7 @@ function get_items(string) {
 // =============================================================
 
 // random parameters
-var ratings = ["img/trash.jpg", "img/bad.jpg", "img/meh.jpg", "img/good.jpg", "img/great.jpg"];
+var ratings = ["img/trash.png", "img/bad.png", "img/meh.png", "img/good.png", "img/great.png"];
 var altLinks = [
     'https://www.amazon.ca/LK-Tempered-Protector-Shock-Absorption-Protection/dp/B07X2WV87Z/ref=sr_1_5?crid=2S9OOHKE5XUL9&dchild=1&keywords=iphone+case+11&qid=1611729768&sprefix=iphone+case+%2Caps%2C165&sr=8-5',
     'https://www.amazon.ca/Spigen-Ultra-Hybrid-Works-iPhone/dp/B07T2NBLX9/ref=sr_1_6?crid=2S9OOHKE5XUL9&dchild=1&keywords=iphone+case+11&qid=1611729768&sprefix=iphone+case+%2Caps%2C165&sr=8-6',
@@ -74,7 +74,7 @@ function httpGet(theUrl)
 
 // Update the relevant fields with the new data.
 const setDOMInfo = info => {
-    document.getElementById('name').innerText = info.productTitle.substring(0, 35) + "...";  // product title
+    document.getElementById("name").innerText = info.productTitle.substring(0, 35) + "...";  // product title
     
     // if (info.productTitle.substring(0, 5) == "Otter" || info.productTitle.substring(0, 5) == "Spige" || info.productTitle.substring(0, 5) == "LK iP") {
     //   document.getElementById("rating").src = ratings[randint(3, 4)];  // high rating if one of the good ones
@@ -90,23 +90,39 @@ const setDOMInfo = info => {
     var items = get_items(info.productCategories);  // IMPORT SORTER
     var http_link = "https://l90oikv0ue.execute-api.us-east-2.amazonaws.com/test/greencap?category=" + items[items.length - 1] + "&price=" + price.toString();
     json_get = JSON.parse(httpGet(http_link));
-    var score = json_get.score;
-    console.log(score);
+    
+    var score = [json_get.planet, json_get.people, json_get.animals, json_get.recommended];
 
     // display score
-    var bracket_size = 1/(ratings.length);
-    var ranking_index = 0;
-    if (score < 5)
-        ranking_index = 0;
-    else if (score < 15)
-        ranking_index = 1;
-    else if (score < 40)
-        ranking_index = 2;
-    else if (score < 60)
-        ranking_index = 3;
+    if (score[0] != 0) 
+        document.getElementById("planet").innerText = (Math.round(score[0])).toString() + " kg CO2";
     else
-        ranking_index = 4;
+        document.getElementById("planet").innerText = "Unknown...";
+    document.getElementById("people").innerText = score[1].toString() + "/5";
+    document.getElementById("animals").innerText = score[2].toString() + "/5";
+
+    // convert kg to 1-5 rating
+    var normalized_planet = 0;
+    if (score[0] == 0)
+        normalized_planet = 1;
+    else if (score[0] < 10)
+        normalized_planet = 5;
+    else if (score[0] < 25)
+        normalized_planet = 4;
+    else if (score[0] < 50)
+        normalized_planet = 3;
+    else if (score[0] < 100)
+        normalized_planet = 2;
+    else
+        normalized_planet = 1;
+
+    // score the product
+    var ranking_index = Math.abs(Math.floor((score[1]-1 + score[2]-1 + normalized_planet-1)/3));
     document.getElementById("rating").src = ratings[ranking_index];
+
+    // link
+    if (ranking_index < 3)
+        document.getElementById("alt").innerHTML = "<a href=" + score[3] + " target='_blank'>" + "Recommendation" + "</a>";
 
 };
 
