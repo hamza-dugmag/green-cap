@@ -74,7 +74,7 @@ function httpGet(theUrl)
 
 // Update the relevant fields with the new data.
 const setDOMInfo = info => {
-    document.getElementById('name').innerText = info.productTitle.substring(0, 35) + "...";  // product title
+    document.getElementById("name").innerText = info.productTitle.substring(0, 35) + "...";  // product title
     
     // if (info.productTitle.substring(0, 5) == "Otter" || info.productTitle.substring(0, 5) == "Spige" || info.productTitle.substring(0, 5) == "LK iP") {
     //   document.getElementById("rating").src = ratings[randint(3, 4)];  // high rating if one of the good ones
@@ -92,21 +92,13 @@ const setDOMInfo = info => {
     json_get = JSON.parse(httpGet(http_link));
     
     var score = [json_get.planet, json_get.people, json_get.animals, json_get.recommended];
-    console.log(score);
 
     // display score
-    var bracket_size = 1/(ratings.length);
-    var ranking_index = 0;
-    if (score < 5)
-        ranking_index = 0;
-    else if (score < 15)
-        ranking_index = 1;
-    else if (score < 40)
-        ranking_index = 2;
-    else if (score < 60)
-        ranking_index = 3;
-    else
-        ranking_index = 4;
+    document.getElementById("planet").innerText = (Math.round(score[0])).toString() + " kg CO2";
+    document.getElementById("people").innerText = score[1];
+    document.getElementById("animals").innerText = score[2];
+
+    var ranking_index = Math.abs(Math.floor((score[1]-1 + score[2]-1)/2));
     document.getElementById("rating").src = ratings[ranking_index];
 
 };
