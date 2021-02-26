@@ -1,14 +1,19 @@
 body {
-    background-color: rgb(228, 255, 235);
+    background-color: rgb(0, 0, 0);
 }
 
 h1, h2, h3, h4, p {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.rank {
+    text-decoration: underline;
+}
+
 .container {
-    background-color: rgb(217, 248, 205);
-    border: 1px solid rgb(10, 153, 34);
-    border-radius: 20px;
+    /* background-color: rgb(176, 255, 145); */
+    background-image: linear-gradient(to bottom right, rgb(107, 255, 94), rgb(0, 255, 234));
+    /* border: 1px solid rgb(0, 0, 0); */
+    border-radius: 10px;
     padding: 10px;
 }

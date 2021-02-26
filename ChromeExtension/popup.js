@@ -45,7 +45,7 @@ function get_items(string) {
 // =============================================================
 
 // random parameters
-var ratings = ["img/trash.jpg", "img/bad.jpg", "img/meh.jpg", "img/good.jpg", "img/great.jpg"];
+var ratings = ["img/trash.png", "img/bad.png", "img/meh.png", "img/good.png", "img/great.png"];
 var altLinks = [
     'https://www.amazon.ca/LK-Tempered-Protector-Shock-Absorption-Protection/dp/B07X2WV87Z/ref=sr_1_5?crid=2S9OOHKE5XUL9&dchild=1&keywords=iphone+case+11&qid=1611729768&sprefix=iphone+case+%2Caps%2C165&sr=8-5',
     'https://www.amazon.ca/Spigen-Ultra-Hybrid-Works-iPhone/dp/B07T2NBLX9/ref=sr_1_6?crid=2S9OOHKE5XUL9&dchild=1&keywords=iphone+case+11&qid=1611729768&sprefix=iphone+case+%2Caps%2C165&sr=8-6',
