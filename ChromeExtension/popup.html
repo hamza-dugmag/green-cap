@@ -2,6 +2,8 @@
 <html>
     <head>
         <link rel="stylesheet" href="popup.css" type="text/css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap" rel="stylesheet">
     </head>
 
     <body>
@@ -9,28 +11,36 @@
         <div style="white-space: nowrap" class="container">
 
             <!-- Popup Title -->
-            <div>
-                <h1 style="float: left;">GreenCap</h1>
-                <img src="img/icon.png" height="50" width="auto">
+            <div style="text-align: center;">
+                <!-- <h1>GreenCap</h1> -->
+                <img src="img/logo.png" height="60" width="auto">
             </div>
-            <p>The greenest solution to online shopping!</p>
+            <!-- <p>The greenest solution to online shopping!</p> -->
             <hr>
 
             <!-- Poduct Name -->
-            <h3>Current Product</h3>
-            <p id="name"></p>
+            <div style="text-align: center;"><h3>Current Product</h3></div>
+            <p id="name">Unknown...</p>
+            <br>
 
             <!-- Product Rating -->
-            <h3>Rating</h3>
+            <div style="text-align: center;"><h3>Product Rating</h3></div>
             <img id="rating" src="img/default.png" width="220" height="auto">
             
-            <p><span class="rank">Planet:</span> <span id="planet"></span></p>
-            <p><span class="rank">People:</span> <span id="people"></span></p>
-            <p><span class="rank">Animals:</span> <span id="animals"></span></p>
+            <p><span class="rank">Planet:</span> <span id="planet">Unknown...</span></p>
+            <p><span class="rank">People:</span> <span id="people">Unknown...</span></p>
+            <p><span class="rank">Animals:</span> <span id="animals">Unknown...</span></p>
+            <br>
 
             <!-- Product Alternatives-->
-            <h3>Better Alternatives</h3>
+            <div style="text-align: center;"><h3>Better Alternatives</h3></div>
             <a href="" id="alt" target='_blank'></a>
+            <br><br>
+
+            <hr>
+            <div style="text-align: center;">
+                <a href="https://chrome.google.com/webstore/detail/greencap/chnnolnfplgipigndpcmimdeabjnabfe" target="_blank">Learn More</a>
+            </div>
         </div>
 
         <!-- <script type="module" src="./scripts/sorter.js"></script> -->

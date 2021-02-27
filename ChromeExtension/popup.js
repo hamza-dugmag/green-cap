@@ -123,6 +123,29 @@ const setDOMInfo = info => {
     // link
     if (ranking_index < 3)
         document.getElementById("alt").innerHTML = "<a href=" + score[3] + " target='_blank'>" + "Recommendation" + "</a>";
+    
+    switch (ranking_index)
+    {
+        case 0:
+            document.body.style.backgroundImage = "linear-gradient(to bottom right, rgb(0, 0, 0), rgb(181, 0, 0))";
+            break;
+        
+        case 1:
+            document.body.style.backgroundImage = "linear-gradient(to bottom right, rgb(0, 0, 0), rgb(219, 128, 24))";
+            break;
+        
+        case 2:
+            document.body.style.backgroundImage = "linear-gradient(to bottom right, rgb(0, 0, 0), rgb(224, 211, 67))";
+            break;
+
+        case 3:
+            document.body.style.backgroundImage = "linear-gradient(to bottom right, rgb(0, 0, 0), rgb(112, 224, 67))";
+            break;
+        
+        case 4:
+            document.body.style.backgroundImage = "linear-gradient(to bottom right, rgb(0, 0, 0), rgb(66, 245, 224))";
+            break;
+    }
 
 };
 
