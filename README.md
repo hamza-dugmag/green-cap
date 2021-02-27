@@ -1,7 +1,7 @@
 # GreenCap
-Chrome extension that rates how environmentally friendly products are.
+Chrome extension which empowers green and ethical brands by rating products and providing recommendations.
 
 # Installation
-Download the ChromeExtension folder and type **chrome://extensions/** in the Google Chrome URL bar.
+Download the ChromeExtension folder and open **chrome://extensions/** from the Google Chrome URL bar.
 
-Activate `Developer Mode` and press `Load Unpacked` to select the ChromeExtension folder.
+Activate `Developer Mode` and select `Load Unpacked` to import the downloaded folder.
