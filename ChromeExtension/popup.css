@@ -1,18 +1,36 @@
 body {
-    background-color: rgb(0, 0, 0);
+    /* background-color: rgb(0, 102, 60); */
+    background-image: linear-gradient(to bottom right, rgb(0, 0, 0), rgb(13, 0, 73));
 }
 
 h1, h2, h3, h4, p {
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Helvetica, Arial, sans-serif; */
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+hr {
+    border: 1px solid black;
 }
 
 .rank {
     text-decoration: underline;
 }
 
+a:visited {
+    color: blue;
+}
+
+a:hover {
+    color: green;
+}
+
+a:active {
+    color: orange;
+}
+
 .container {
-    /* background-color: rgb(176, 255, 145); */
-    background-image: linear-gradient(to bottom right, rgb(107, 255, 94), rgb(0, 255, 234));
+    /* background-color: white; */
+    background-image: linear-gradient(to bottom right, rgb(255, 255, 255),rgb(163, 255, 160));
     /* border: 1px solid rgb(0, 0, 0); */
     border-radius: 10px;
     padding: 10px;
