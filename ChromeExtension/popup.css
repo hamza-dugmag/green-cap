@@ -8,6 +8,10 @@ h1, h2, h3, h4, p {
     font-family: 'Merriweather Sans', sans-serif;
 }
 
+table, th, td {
+    border: none;
+}
+
 hr {
     border: 1px solid black;
 }
