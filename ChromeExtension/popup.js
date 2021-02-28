@@ -117,7 +117,7 @@ const setDOMInfo = info => {
             break;
         
         case 4:
-            document.body.style.backgroundImage = "linear-gradient(to bottom right, rgb(0, 0, 0), rgb(66, 245, 224))";
+            document.body.style.backgroundImage = "linear-gradient(to bottom right, rgb(25, 255, 75), rgb(25, 255, 255))";
             break;
     }
 
