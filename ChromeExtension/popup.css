@@ -1,10 +1,8 @@
 body {
-    /* background-color: rgb(0, 102, 60); */
     background-image: linear-gradient(to bottom right, rgb(0, 0, 0), rgb(13, 0, 73));
 }
 
 h1, h2, h3, h4, p {
-    /* font-family: Helvetica, Arial, sans-serif; */
     font-family: 'Merriweather Sans', sans-serif;
 }
 
@@ -33,9 +31,7 @@ a:active {
 }
 
 .container {
-    /* background-color: white; */
     background-image: linear-gradient(to bottom right, rgb(255, 255, 255),rgb(163, 255, 160));
-    /* border: 1px solid rgb(0, 0, 0); */
     border-radius: 10px;
     padding: 10px;
 }
