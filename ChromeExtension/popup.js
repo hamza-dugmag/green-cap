@@ -40,7 +40,7 @@ function get_items(string) {
 }
 // =============================================================
 
-var ratings = ["img/trash.png", "img/bad.png", "img/meh.png", "img/good.png", "img/great.png"];
+var rating_imgs = ["img/trash.png", "img/bad.png", "img/meh.png", "img/good.png", "img/great.png"];
 
 
 // https://stackoverflow.com/questions/247483/http-get-request-in-javascript
@@ -89,14 +89,15 @@ const setDOMInfo = info => {
         normalized_planet = 1;
 
     // score the product
-    var ranking_index = Math.abs(Math.floor((score[1]-1 + score[2]-1 + normalized_planet-1)/3));
-    document.getElementById("rating").src = ratings[ranking_index];
+    var rating_index = Math.abs(Math.floor((score[1]-1 + score[2]-1 + normalized_planet-1)/3));
+    document.getElementById("rating").src = rating_imgs[rating_index];
 
     // link
-    if (ranking_index < 3)
+    if (rating_index < 3)
         document.getElementById("alt").innerHTML = "<a href=" + score[3] + " target='_blank'>" + "Recommendation" + "</a>";
     
-    switch (ranking_index)
+    // change border gradient based on rating
+    switch (rating_index)
     {
         case 0:
             document.body.style.backgroundImage = "linear-gradient(to bottom right, rgb(0, 0, 0), rgb(181, 0, 0))";
