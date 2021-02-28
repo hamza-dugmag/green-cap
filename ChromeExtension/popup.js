@@ -40,7 +40,8 @@ function get_items(string) {
 }
 // =============================================================
 
-var rating_imgs = ["img/trash.png", "img/bad.png", "img/meh.png", "img/good.png", "img/great.png"];
+
+var rating_imgs = ["img/1.png", "img/2.png", "img/3.png", "img/4.png", "img/5.png"];
 
 
 // https://stackoverflow.com/questions/247483/http-get-request-in-javascript
