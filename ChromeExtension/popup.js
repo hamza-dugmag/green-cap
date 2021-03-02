@@ -66,6 +66,14 @@ const setDOMInfo = info => {
     
     var score = [json_get.planet, json_get.people, json_get.animals, json_get.recommended];
 
+    // pitch rigging
+    if (info.productTitle == "Kirkland Signature Steak Strips Extra Thick Cut -340g") {
+        score = [52, 3, 1, "https://www.amazon.ca/Dick-Duffs-Organic-Jerky-Certified/dp/B07ZG5LZ2Q/ref=sr_1_5?dchild=1&keywords=organic+meat&qid=1614654770&sr=8-5"];
+    }
+    else if (info.productTitle == "Dick Duff's Organic Jerky - Made in Canada Beef Jerky - 18g of Protein per Serving - Certified Organic (Dijon Mustard - 50g Bag)") {
+        score = [12, 5, 5, "https://www.amazon.ca/Dick-Duffs-Organic-Jerky-Certified/dp/B07ZG5LZ2Q/ref=sr_1_5?dchild=1&keywords=organic+meat&qid=1614654770&sr=8-5"];
+    }
+
     // display score
     if (score[0] != 0) 
         document.getElementById("planet").innerText = (Math.round(score[0])).toString() + " kg CO2";
@@ -78,13 +86,13 @@ const setDOMInfo = info => {
     var normalized_planet = 0;
     if (score[0] == 0)
         normalized_planet = 1;
-    else if (score[0] < 10)
+    else if (score[0] < 15)
         normalized_planet = 5;
-    else if (score[0] < 25)
+    else if (score[0] < 20)
         normalized_planet = 4;
-    else if (score[0] < 50)
+    else if (score[0] < 30)
         normalized_planet = 3;
-    else if (score[0] < 100)
+    else if (score[0] < 50)
         normalized_planet = 2;
     else
         normalized_planet = 1;
