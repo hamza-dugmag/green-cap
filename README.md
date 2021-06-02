@@ -5,11 +5,13 @@
 A Chrome extension which empowers online shoppers to support green and ethical brands by providing product ratings and recommendations. [Learn more.](https://hamzadugmag.com/files/Hamza_Dugmag_GreenCap_Pitch.pdf)
 
 # Screenshots
-<img src="https://github.com/hamza-dugmag/green-cap/blob/main/Screenshots/ss1.jpg?raw=true" height="200" width="auto">
-<img src="https://github.com/hamza-dugmag/green-cap/blob/main/Screenshots/ss2.jpg?raw=true" height="200" width="auto">
-<img src="https://github.com/hamza-dugmag/green-cap/blob/main/Screenshots/ss3.jpg?raw=true" height="200" width="auto">
-<img src="https://github.com/hamza-dugmag/green-cap/blob/main/Screenshots/ss4.jpg?raw=true" height="200" width="auto">
-<img src="https://github.com/hamza-dugmag/green-cap/blob/main/Screenshots/ss5.jpg?raw=true" height="200" width="auto">
+<p float="left">
+    <img src="https://github.com/hamza-dugmag/green-cap/blob/main/Screenshots/ss1.jpg?raw=true" height="200" width="auto">
+    <img src="https://github.com/hamza-dugmag/green-cap/blob/main/Screenshots/ss2.jpg?raw=true" height="200" width="auto">
+    <img src="https://github.com/hamza-dugmag/green-cap/blob/main/Screenshots/ss3.jpg?raw=true" height="200" width="auto">
+    <img src="https://github.com/hamza-dugmag/green-cap/blob/main/Screenshots/ss4.jpg?raw=true" height="200" width="auto">
+    <img src="https://github.com/hamza-dugmag/green-cap/blob/main/Screenshots/ss5.jpg?raw=true" height="200" width="auto">
+</p>
 
 # Installation
 Download the ChromeExtension folder and open **chrome://extensions/** from the Google Chrome URL bar.
