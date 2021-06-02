@@ -6,11 +6,11 @@ A Chrome extension which empowers online shoppers to support green and ethical b
 
 # Screenshots
 <p float="left">
-    <img src="https://github.com/hamza-dugmag/green-cap/blob/main/Screenshots/ss1.jpg?raw=true" height="200" width="auto">
-    <img src="https://github.com/hamza-dugmag/green-cap/blob/main/Screenshots/ss2.jpg?raw=true" height="200" width="auto">
-    <img src="https://github.com/hamza-dugmag/green-cap/blob/main/Screenshots/ss3.jpg?raw=true" height="200" width="auto">
-    <img src="https://github.com/hamza-dugmag/green-cap/blob/main/Screenshots/ss4.jpg?raw=true" height="200" width="auto">
-    <img src="https://github.com/hamza-dugmag/green-cap/blob/main/Screenshots/ss5.jpg?raw=true" height="200" width="auto">
+    <img src="https://github.com/hamza-dugmag/green-cap/blob/main/Screenshots/ss1.jpg?raw=true" height="250" width="auto">
+    <img src="https://github.com/hamza-dugmag/green-cap/blob/main/Screenshots/ss2.jpg?raw=true" height="250" width="auto">
+    <img src="https://github.com/hamza-dugmag/green-cap/blob/main/Screenshots/ss3.jpg?raw=true" height="250" width="auto">
+    <img src="https://github.com/hamza-dugmag/green-cap/blob/main/Screenshots/ss4.jpg?raw=true" height="250" width="auto">
+    <img src="https://github.com/hamza-dugmag/green-cap/blob/main/Screenshots/ss5.jpg?raw=true" height="250" width="auto">
 </p>
 
 # Installation
